@@ -11,59 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.text_field :name, placeholder: "Name", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.select :type_id, @types.collect { |t| [t.name, t.id ]}, {include_blank: "Please select a type"} %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :vegetarian, placeholder: "Veg?", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.number_field :amount, placeholder: "Amount", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_field :unit, placeholder: "Unit", class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :type_id %>
-    <%= form.number_field :type_id %>
+    <%= form.number_field :ingredient_id, placeholder: "Ingredient", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :vegetarian %>
-    <%= form.text_field :vegetarian %>
+  <div class="form-group">
+    <%= form.text_field :tried, placeholder: "Tested?", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+  <div class="form-group">
+    <%= form.text_field :rating, placeholder: "Rating", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :unit %>
-    <%= form.text_field :unit %>
+  <div class="form-group">
+    <%= form.text_field :meal_prep, placeholder: "Meal Prep?", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :ingredient_id %>
-    <%= form.number_field :ingredient_id %>
+  <div class="form-group">
+    <%= form.text_field :notes, placeholder: "Notes", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :tried %>
-    <%= form.text_field :tried %>
+  <div class="form-group">
+    <%= form.text_field :link, placeholder: "Link", class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :meal_prep %>
-    <%= form.text_field :meal_prep %>
-  </div>
-
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_field :notes %>
-  </div>
-
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
+  <div class="form-group">
+    <strong>Upload Recipe Image: </strong>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">
