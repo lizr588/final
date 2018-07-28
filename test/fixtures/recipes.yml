@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type_id: 1
+  vegetarian: MyString
+  amount: 1
+  unit: MyString
+  ingredient_id: 1
+  tried: MyString
+  rating: 1.5
+  meal_prep: MyString
+  notes: MyString
+  link: MyString
+
+two:
+  name: MyString
+  type_id: 1
+  vegetarian: MyString
+  amount: 1
+  unit: MyString
+  ingredient_id: 1
+  tried: MyString
+  rating: 1.5
+  meal_prep: MyString
+  notes: MyString
+  link: MyString
