@@ -19,14 +19,6 @@
     <%= form.select :type_id, @types.collect { |t| [t.name, t.id ]}, {include_blank: "Please select a type"} %>
   </div>
 
-  <div>
-
-  <label class="checkbox-inline">Veg?
-    <!-- <input type="checkbox" value="">Y</label> -->
-    <%= form.check_box :vegetarian, placeholder: "Veg?", class: "checkbox-inline" %>
-  </label>
-  </div>
-
   <div class="form-group">
     <%= form.number_field :amount, placeholder: "Amount", class: "form-control" %>
   </div>
@@ -40,15 +32,7 @@
   </div>
 
   <div class="form-group">
-    <%= form.text_field :tried, placeholder: "Tested?", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
     <%= form.text_field :rating, placeholder: "Rating", class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.text_field :meal_prep, placeholder: "Meal Prep?", class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -57,6 +41,19 @@
 
   <div class="form-group">
     <%= form.text_field :link, placeholder: "Link", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.check_box(:vegetarian) %>
+    <%= label_tag(:vegetarian, "Veg") %>
+
+
+    <%= form.check_box(:meal_prep) %>
+    <%= label_tag(:meal_prep, "Meal Prep") %>
+
+
+    <%= form.check_box(:tried) %>
+    <%= label_tag(:tried, "Tried") %>
   </div>
 
   <div class="form-group">
